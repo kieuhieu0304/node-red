@@ -1,0 +1,24 @@
+[
+    {
+        "id": "285f093f0198f444",
+        "type": "http request",
+        "z": "73660abab31b9bd8",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1310,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    }
+]
