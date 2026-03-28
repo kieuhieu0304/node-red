@@ -1,5 +1,2012 @@
 [
     {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "6da8255b562507e6",
+        "type": "tab",
+        "label": "Living room",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "bfc7232f369065b0",
+        "type": "tab",
+        "label": "Bedroom 1",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "73660abab31b9bd8",
+        "type": "tab",
+        "label": "Bedroom 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "fb63c90331591127",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "d98ab1e8c5b778b3",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "95286a67695948c0",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "3cc11d24.ff01a2",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "WARNING: please check you have started this container with a volume that is mounted to /data\\n otherwise any flow changes are lost when you redeploy or upgrade the container\\n (e.g. upgrade to a more recent node-red docker image).\\n  If you are using named volumes you can ignore this warning.\\n Double click or see info side panel to learn how to start Node-RED in Docker to save your work",
+        "info": "\nTo start docker with a bind mount volume (-v option), for example:\n\n```\ndocker run -it -p 1880:1880 -v /home/user/node_red_data:/data --name mynodered nodered/node-red\n```\n\nwhere `/home/user/node_red_data` is a directory on your host machine where you want to store your flows.\n\nIf you do not do this then you can experiment and redploy flows, but if you restart or upgrade the container the flows will be disconnected and lost. \n\nThey will still exist in a hidden data volume, which can be recovered using standard docker techniques, but that is much more complex than just starting with a named volume as described above.",
+        "x": 350,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "b93a3475628382c6",
+        "type": "http in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "url": "api/light",
+        "method": "post",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 410,
+        "y": 220,
+        "wires": [
+            [
+                "e5f59579879f7e65"
+            ]
+        ]
+    },
+    {
+        "id": "e5f59579879f7e65",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 1",
+        "func": "node.warn(\"payload nhận được: \" + JSON.stringify(msg.payload));\n\nif (msg.payload && msg.payload.state) {\n    global.set(\"lightState\", msg.payload.state);\n    msg.payload = { success: true, state: msg.payload.state };\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 240,
+        "wires": [
+            [
+                "a51516a9426473ce",
+                "55bca5b92372b3d7"
+            ]
+        ]
+    },
+    {
+        "id": "a51516a9426473ce",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "topic": "home/light",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "95286a67695948c0",
+        "x": 830,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "55bca5b92372b3d7",
+        "type": "http response",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 850,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "0601d07727ea77fd",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 2",
+        "func": "msg.payload = {\n    state: global.get(\"lightState\") || \"OFF\" // ✅ trả về \"ON\"/\"OFF\", mặc định \"OFF\"\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1240,
+        "y": 80,
+        "wires": [
+            [
+                "d1708b681afa4962"
+            ]
+        ]
+    },
+    {
+        "id": "d1708b681afa4962",
+        "type": "http response",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1470,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "82f7a19713ed0920",
+        "type": "http in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "url": "api/light/status",
+        "method": "get",
+        "upload": true,
+        "skipBodyParsing": true,
+        "swaggerDoc": "",
+        "x": 1010,
+        "y": 80,
+        "wires": [
+            [
+                "0601d07727ea77fd"
+            ]
+        ]
+    },
+    {
+        "id": "f3e4fe2d041e967a",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "temp no",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"value\":25}",
+        "payloadType": "json",
+        "x": 380,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5f0cd1608db6a605",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "smoke yes",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"value\":1}",
+        "payloadType": "json",
+        "x": 300,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5474667d28155a63",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "smoke no",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"value\":0}",
+        "payloadType": "json",
+        "x": 300,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "193ab767d8c06855",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "temp yes",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"value\":80}",
+        "payloadType": "json",
+        "x": 380,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9ec73286370920ac",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 700,
+        "y": 660,
+        "wires": [
+            [
+                "72a08804c4d43b2c"
+            ]
+        ]
+    },
+    {
+        "id": "72a08804c4d43b2c",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://mysmarthome-13774-default-rtdb.asia-southeast1.firebasedatabase.app/devices.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 870,
+        "y": 620,
+        "wires": [
+            [
+                "68ab136e31a7fe0d"
+            ]
+        ]
+    },
+    {
+        "id": "68ab136e31a7fe0d",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "51a91674c1a406bd",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 700,
+        "y": 760,
+        "wires": [
+            [
+                "bab4918707b23576"
+            ]
+        ]
+    },
+    {
+        "id": "bab4918707b23576",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 17",
+        "func": "msg.payload = {\n    state: \"on\"\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 760,
+        "wires": [
+            [
+                "ea0726fa10440e92"
+            ]
+        ]
+    },
+    {
+        "id": "ea0726fa10440e92",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://mysmarthome-13774-default-rtdb.asia-southeast1.firebasedatabase.app/devices/fan1.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1190,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8380d2e8db9fb549",
+        "type": "http in",
+        "z": "6da8255b562507e6",
+        "name": "",
+        "url": "/api/living/:device",
+        "method": "post",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 1120,
+        "y": 220,
+        "wires": [
+            [
+                "731860e5f8ace570",
+                "760beb0c7755104c"
+            ]
+        ]
+    },
+    {
+        "id": "731860e5f8ace570",
+        "type": "function",
+        "z": "6da8255b562507e6",
+        "name": "function 6",
+        "func": "\nvar device = msg.req.params.device;\nvar cmd = msg.payload;\nvar DB =\"https://mysmarthome-13774-default-rtdb.asia-southeast1.firebasedatabase.app/\";\n\n// lấy state cũ\nvar cur = flow.get('living_' + device) || { state: 'off' };\n\n// ===== XỬ LÝ THEO DEVICE =====\n\n// QUẠT\nif (device === 'fan' || device === 'fan1' || device === 'fan-ceil') {\n    if (!cur.speed) cur.speed = 1;\n    if (cmd.state) cur.state = cmd.state;\n    if (cmd.speed) cur.speed = parseInt(cmd.speed);\n}\n\n// ĐIỀU HOÀ\nelse if (device === 'ac1') {\n    if (!cur.temperature) cur.temperature = 25;\n    if (cmd.state) cur.state = cmd.state;\n\n    if (cmd.temperature !== undefined) {\n        var t = parseInt(cmd.temperature);\n        cur.temperature = Math.max(16, Math.min(30, t));\n    }\n}\n\n// THIẾT BỊ ON/OFF\nelse {\n    if (cmd.state) cur.state = cmd.state;\n}\n\n// lưu lại state\nflow.set('living_' + device, cur);\n\n// ===== MQTT =====\nmsg.topic = 'home/living/' + device;\nmsg.payload = cur;\n\n// ===== FIREBASE =====\nvar msgFirebase = {\n    method: \"PATCH\",\n    url: DB + \"/living_room/\" + device + \".json\",\n    headers: { \"Content-Type\": \"application/json\" },\n    payload: {\n        state: cur.state,\n        speed: cur.speed || null,\n        temperature: cur.temperature || null,\n        timestamp: new Date().toISOString()\n    }\n};\n\n// ===== RESPONSE =====\nvar msgRes = {\n    payload: {\n        success: true,\n        device: device,\n        data: cur\n    }\n};\n\nreturn [msg, msgRes,msgFirebase];",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1360,
+        "y": 240,
+        "wires": [
+            [
+                "adafa9cacd8bfd5e"
+            ],
+            [
+                "06f54e58a154f6c0"
+            ],
+            [
+                "0328ce89d4a02d37"
+            ]
+        ]
+    },
+    {
+        "id": "06f54e58a154f6c0",
+        "type": "http response",
+        "z": "6da8255b562507e6",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1570,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "adafa9cacd8bfd5e",
+        "type": "mqtt out",
+        "z": "6da8255b562507e6",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d98ab1e8c5b778b3",
+        "x": 1610,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "a2691e219d495ff8",
+        "type": "http in",
+        "z": "6da8255b562507e6",
+        "name": "",
+        "url": "/api/living/:device/status",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 360,
+        "y": 100,
+        "wires": [
+            [
+                "6485ddfc2c6ee63d"
+            ]
+        ]
+    },
+    {
+        "id": "6485ddfc2c6ee63d",
+        "type": "function",
+        "z": "6da8255b562507e6",
+        "name": "function 7",
+        "func": "var device = msg.req.params.device;\nvar cur = flow.get('living_' + device) || { state: 'off' };\n\nmsg.payload = cur;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 80,
+        "wires": [
+            [
+                "11fa0ede90fa9809"
+            ]
+        ]
+    },
+    {
+        "id": "11fa0ede90fa9809",
+        "type": "http response",
+        "z": "6da8255b562507e6",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 890,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "760beb0c7755104c",
+        "type": "debug",
+        "z": "6da8255b562507e6",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1420,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "65dccc68441cb859",
+        "type": "inject",
+        "z": "6da8255b562507e6",
+        "name": "smoke",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 280,
+        "y": 500,
+        "wires": [
+            [
+                "55e63a27ae9e6e21"
+            ]
+        ]
+    },
+    {
+        "id": "9694fd43be1ff88b",
+        "type": "inject",
+        "z": "6da8255b562507e6",
+        "name": "temp",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 270,
+        "y": 580,
+        "wires": [
+            [
+                "73696221d48d2b51"
+            ]
+        ]
+    },
+    {
+        "id": "55e63a27ae9e6e21",
+        "type": "function",
+        "z": "6da8255b562507e6",
+        "name": "function 8",
+        "func": "const smoke = Math.random() < 0.4 ? 1 : 0;\n\n// Lưu vào global\nconst pccc = global.get('pccc') || {};\npccc.smoke = smoke;\nglobal.set('pccc', pccc);\n\nmsg.payload = { value: smoke };\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 500,
+        "wires": [
+            [
+                "a3480634749bab35"
+            ]
+        ]
+    },
+    {
+        "id": "73696221d48d2b51",
+        "type": "function",
+        "z": "6da8255b562507e6",
+        "name": "function 9",
+        "func": "const temp = Math.floor(Math.random() * 40) + 20;\n\nconst pccc = global.get('pccc') || {};\npccc.temperature = temp;\npccc.alert = pccc.smoke >= 1 || temp >= 50;\npccc.alertMsg = pccc.alert ? 'Cảnh báo!' : 'An toàn';\nglobal.set('pccc', pccc);\n\nmsg.payload = { value: temp };\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 580,
+        "wires": [
+            [
+                "dab9acdd44f1ef21"
+            ]
+        ]
+    },
+    {
+        "id": "b231c8a231cf57dc",
+        "type": "function",
+        "z": "6da8255b562507e6",
+        "name": "function smoke",
+        "func": "var value = msg.payload.value;\nglobal.set(\"smoke\", value);\n\nif (value === 1) {\n    global.set(\"alarm\", true);\n    global.set(\"lightState\", \"OFF\"); // tắt điện\n    node.warn(\"🔥 PHÁT HIỆN KHÓI!\");\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 280,
+        "wires": [
+            [
+                "e6de87b949b609a0"
+            ]
+        ]
+    },
+    {
+        "id": "3e682efa847e032c",
+        "type": "function",
+        "z": "6da8255b562507e6",
+        "name": "function temp",
+        "func": "var value = msg.payload.value;\nglobal.set(\"temperature\", value);\n\nif (value >= 50) {\n    global.set(\"alarm\", true);\n    global.set(\"lightState\", \"OFF\"); // tắt điện\n    node.warn(\"🌡️ NHIỆT ĐỘ CAO: \" + value);\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 360,
+        "wires": [
+            [
+                "e27f65e54f98a98a"
+            ]
+        ]
+    },
+    {
+        "id": "a3480634749bab35",
+        "type": "mqtt out",
+        "z": "6da8255b562507e6",
+        "name": "",
+        "topic": "home/smoke",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d98ab1e8c5b778b3",
+        "x": 670,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "dab9acdd44f1ef21",
+        "type": "mqtt out",
+        "z": "6da8255b562507e6",
+        "name": "",
+        "topic": "home/temp",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d98ab1e8c5b778b3",
+        "x": 650,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "35bf7dd816a1cbe9",
+        "type": "mqtt in",
+        "z": "6da8255b562507e6",
+        "name": "",
+        "topic": "home/smoke",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "d98ab1e8c5b778b3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 280,
+        "wires": [
+            [
+                "b231c8a231cf57dc"
+            ]
+        ]
+    },
+    {
+        "id": "66f2b7f2fb49dc91",
+        "type": "mqtt in",
+        "z": "6da8255b562507e6",
+        "name": "",
+        "topic": "home/temp",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "d98ab1e8c5b778b3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 380,
+        "wires": [
+            [
+                "3e682efa847e032c"
+            ]
+        ]
+    },
+    {
+        "id": "de24f384bfa6d18b",
+        "type": "http in",
+        "z": "6da8255b562507e6",
+        "name": "",
+        "url": "/api/living/fire/sensor",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 1190,
+        "y": 680,
+        "wires": [
+            [
+                "b5ad97187526f9bd"
+            ]
+        ]
+    },
+    {
+        "id": "b5ad97187526f9bd",
+        "type": "function",
+        "z": "6da8255b562507e6",
+        "name": "function 10",
+        "func": "const pccc = global.get('pccc') || {\n    smoke: 0,\n    temperature: 25,\n    alert: false,\n    alertMsg: 'An toàn'\n};\nmsg.payload = pccc;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 680,
+        "wires": [
+            [
+                "cc647601840e525a"
+            ]
+        ]
+    },
+    {
+        "id": "cc647601840e525a",
+        "type": "http response",
+        "z": "6da8255b562507e6",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1710,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "e6de87b949b609a0",
+        "type": "function",
+        "z": "6da8255b562507e6",
+        "name": "Firebase - Smoke",
+        "func": "var DB = \"https://mysmarthome-13774-default-rtdb.asia-southeast1.firebasedatabase.app/\";\nvar room = \"living_room\"; // đổi thành bedroom_1 / bedroom_2 tùy tab\n\n// Lưu trạng thái hiện tại (PATCH)\nmsg.method = \"PATCH\";\nmsg.url = DB + \"/\" + room + \"/smoke.json\";\nmsg.headers = { \"Content-Type\": \"application/json\" };\nmsg.payload = {\n    value: msg.payload,\n    status: msg.payload > 0 ? \"DETECTED\" : \"CLEAR\",\n    timestamp: new Date().toISOString()\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 280,
+        "wires": [
+            [
+                "a854683cc377fc0c"
+            ]
+        ]
+    },
+    {
+        "id": "e27f65e54f98a98a",
+        "type": "function",
+        "z": "6da8255b562507e6",
+        "name": "Firebase - Temp",
+        "func": "var DB = \"https://mysmarthome-13774-default-rtdb.asia-southeast1.firebasedatabase.app/\";\nvar room = \"living_room\";\n\nmsg.method = \"PATCH\";\nmsg.url = DB + \"/\" + room + \"/temperature.json\";\nmsg.headers = { \"Content-Type\": \"application/json\" };\nmsg.payload = {\n    value: msg.payload,\n    status: msg.payload > 50 ? \"HIGH\" : \"NORMAL\",\n    timestamp: new Date().toISOString()\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 360,
+        "wires": [
+            [
+                "a854683cc377fc0c"
+            ]
+        ]
+    },
+    {
+        "id": "a854683cc377fc0c",
+        "type": "http request",
+        "z": "6da8255b562507e6",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 870,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0328ce89d4a02d37",
+        "type": "http request",
+        "z": "6da8255b562507e6",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1470,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7d0b62bb80c11938",
+        "type": "http in",
+        "z": "bfc7232f369065b0",
+        "name": "",
+        "url": "/api/bedroom1/:device",
+        "method": "post",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 820,
+        "y": 320,
+        "wires": [
+            [
+                "81e15818993005b9",
+                "9152fdd767e57a70"
+            ]
+        ]
+    },
+    {
+        "id": "81e15818993005b9",
+        "type": "function",
+        "z": "bfc7232f369065b0",
+        "name": "function 3",
+        "func": "// lấy device từ URL\nvar device = msg.req.params.device;\nvar cmd = msg.payload;\nvar DB =\"https://mysmarthome-13774-default-rtdb.asia-southeast1.firebasedatabase.app/\";\n\n\n// lấy state cũ\nvar cur = flow.get('bedroom1_' + device) || { state: 'off' };\n\n// ===== XỬ LÝ THEO DEVICE =====\n\n// QUẠT\nif (device === 'fan' || device === 'fan2' || device === 'fan-ceil') {\n    if (!cur.speed) cur.speed = 1;\n    if (cmd.state) cur.state = cmd.state;\n    if (cmd.speed) cur.speed = parseInt(cmd.speed);\n}\n\n// ĐIỀU HOÀ\nelse if (device === 'ac2') {\n    if (!cur.temperature) cur.temperature = 25;\n    if (cmd.state) cur.state = cmd.state;\n\n    if (cmd.temperature !== undefined) {\n        var t = parseInt(cmd.temperature);\n        cur.temperature = Math.max(16, Math.min(30, t));\n    }\n}\n\n\n// THIẾT BỊ ON/OFF\nelse {\n    if (cmd.state) cur.state = cmd.state;\n}\n\n// lưu lại state\nflow.set('bedroom1_' + device, cur);\n\n// ===== MQTT =====\nmsg.topic = 'home/bedroom1/' + device;\nmsg.payload = cur;\n\nvar msgFirebase = {\n    method: \"PATCH\",\n    url: DB + \"/bedroom1/\" + device + \".json\",\n    headers: { \"Content-Type\": \"application/json\" },\n    payload: {\n        state: cur.state,\n        speed: cur.speed || null,\n        temperature: cur.temperature || null,\n        timestamp: new Date().toISOString()\n    }\n};\n\n// ===== RESPONSE =====\nvar msgRes = {\n    payload: {\n        success: true,\n        device: device,\n        data: cur\n    }\n};\n\nreturn [msg, msgRes,msgFirebase];",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 340,
+        "wires": [
+            [
+                "ed7dd190108a5cd1"
+            ],
+            [
+                "e910ddac629ec624"
+            ],
+            [
+                "ea3e1cb98cbc3235"
+            ]
+        ]
+    },
+    {
+        "id": "e910ddac629ec624",
+        "type": "http response",
+        "z": "bfc7232f369065b0",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1230,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "ed7dd190108a5cd1",
+        "type": "mqtt out",
+        "z": "bfc7232f369065b0",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d98ab1e8c5b778b3",
+        "x": 1250,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "1af4d9b41a7a54aa",
+        "type": "http in",
+        "z": "bfc7232f369065b0",
+        "name": "",
+        "url": "/api/bedroom1/:device/status",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 410,
+        "y": 140,
+        "wires": [
+            [
+                "f7a506a8b3cd12ec"
+            ]
+        ]
+    },
+    {
+        "id": "f7a506a8b3cd12ec",
+        "type": "function",
+        "z": "bfc7232f369065b0",
+        "name": "function 4",
+        "func": "var device = msg.req.params.device;\nvar cur = flow.get('bedroom1_' + device) || { state: 'off' };\n\nmsg.payload = cur;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 120,
+        "wires": [
+            [
+                "28dfeff0d8d1c332"
+            ]
+        ]
+    },
+    {
+        "id": "28dfeff0d8d1c332",
+        "type": "http response",
+        "z": "bfc7232f369065b0",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 930,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "9152fdd767e57a70",
+        "type": "debug",
+        "z": "bfc7232f369065b0",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "55ba0c9387a414af",
+        "type": "inject",
+        "z": "bfc7232f369065b0",
+        "name": "smoke",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 620,
+        "y": 560,
+        "wires": [
+            [
+                "6e91399fe5e98364"
+            ]
+        ]
+    },
+    {
+        "id": "f7cbce5ae6ac4aa7",
+        "type": "inject",
+        "z": "bfc7232f369065b0",
+        "name": "temp",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 610,
+        "y": 640,
+        "wires": [
+            [
+                "158647b2d4d53184"
+            ]
+        ]
+    },
+    {
+        "id": "6e91399fe5e98364",
+        "type": "function",
+        "z": "bfc7232f369065b0",
+        "name": "function 5",
+        "func": "const smoke = Math.random() < 0.4 ? 1 : 0;\n\n// Lưu vào global\nconst pccc = global.get('pccc') || {};\npccc.smoke = smoke;\nglobal.set('pccc', pccc);\n\nmsg.payload = { value: smoke };\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 560,
+        "wires": [
+            [
+                "999013a9f58872d0"
+            ]
+        ]
+    },
+    {
+        "id": "158647b2d4d53184",
+        "type": "function",
+        "z": "bfc7232f369065b0",
+        "name": "function 6",
+        "func": "const temp = Math.floor(Math.random() * 40) + 20;\n\nconst pccc = global.get('pccc') || {};\npccc.temperature = temp;\npccc.alert = pccc.smoke >= 1 || temp >= 50;\npccc.alertMsg = pccc.alert ? 'Cảnh báo!' : 'An toàn';\nglobal.set('pccc', pccc);\n\nmsg.payload = { value: temp };\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 640,
+        "wires": [
+            [
+                "0f731649f48e2f35"
+            ]
+        ]
+    },
+    {
+        "id": "5be874ab319d2f94",
+        "type": "function",
+        "z": "bfc7232f369065b0",
+        "name": "function smoke",
+        "func": "var value = msg.payload.value;\nglobal.set(\"smoke\", value);\n\nif (value === 1) {\n    global.set(\"alarm\", true);\n    global.set(\"lightState\", \"OFF\"); // tắt điện\n    node.warn(\"🔥 PHÁT HIỆN KHÓI!\");\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 740,
+        "wires": [
+            [
+                "0560b2595a2cd0e2"
+            ]
+        ]
+    },
+    {
+        "id": "33835eea827357bd",
+        "type": "function",
+        "z": "bfc7232f369065b0",
+        "name": "function temp",
+        "func": "var value = msg.payload.value;\nglobal.set(\"temperature\", value);\n\nif (value >= 50) {\n    global.set(\"alarm\", true);\n    global.set(\"lightState\", \"OFF\"); // tắt điện\n    node.warn(\"🌡️ NHIỆT ĐỘ CAO: \" + value);\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 820,
+        "wires": [
+            [
+                "f8479bf4679c31f1"
+            ]
+        ]
+    },
+    {
+        "id": "999013a9f58872d0",
+        "type": "mqtt out",
+        "z": "bfc7232f369065b0",
+        "name": "",
+        "topic": "home/smoke",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d98ab1e8c5b778b3",
+        "x": 1010,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "0f731649f48e2f35",
+        "type": "mqtt out",
+        "z": "bfc7232f369065b0",
+        "name": "",
+        "topic": "home/temp",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d98ab1e8c5b778b3",
+        "x": 990,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "e79e4e1d4c182896",
+        "type": "mqtt in",
+        "z": "bfc7232f369065b0",
+        "name": "",
+        "topic": "home/smoke",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "d98ab1e8c5b778b3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 730,
+        "y": 740,
+        "wires": [
+            [
+                "5be874ab319d2f94"
+            ]
+        ]
+    },
+    {
+        "id": "f8329e5e72d5c032",
+        "type": "mqtt in",
+        "z": "bfc7232f369065b0",
+        "name": "",
+        "topic": "home/temp",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "d98ab1e8c5b778b3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 720,
+        "y": 840,
+        "wires": [
+            [
+                "33835eea827357bd"
+            ]
+        ]
+    },
+    {
+        "id": "eff809a3cdc1e227",
+        "type": "http in",
+        "z": "bfc7232f369065b0",
+        "name": "",
+        "url": "/api/bedroom1/fire/sensor",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 460,
+        "wires": [
+            [
+                "1028d5f262d3492f"
+            ]
+        ]
+    },
+    {
+        "id": "1028d5f262d3492f",
+        "type": "function",
+        "z": "bfc7232f369065b0",
+        "name": "function 11",
+        "func": "const pccc = global.get('pccc') || {\n    smoke: 0,\n    temperature: 25,\n    alert: false,\n    alertMsg: 'An toàn'\n};\nmsg.payload = pccc;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 460,
+        "wires": [
+            [
+                "076ffabfca7a45f9"
+            ]
+        ]
+    },
+    {
+        "id": "076ffabfca7a45f9",
+        "type": "http response",
+        "z": "bfc7232f369065b0",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 670,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "0560b2595a2cd0e2",
+        "type": "function",
+        "z": "bfc7232f369065b0",
+        "name": "Firebase - Smoke",
+        "func": "var DB = \"https://mysmarthome-13774-default-rtdb.asia-southeast1.firebasedatabase.app/\";\nvar room = \"bedroom1\"; \n\n// Lưu trạng thái hiện tại (PATCH)\nmsg.method = \"PATCH\";\nmsg.url = DB + \"/\" + room + \"/smoke.json\";\nmsg.headers = { \"Content-Type\": \"application/json\" };\nmsg.payload = {\n    value: msg.payload,\n    status: msg.payload > 0 ? \"DETECTED\" : \"CLEAR\",\n    timestamp: new Date().toISOString()\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1230,
+        "y": 740,
+        "wires": [
+            [
+                "5b5a582a69a7161d"
+            ]
+        ]
+    },
+    {
+        "id": "f8479bf4679c31f1",
+        "type": "function",
+        "z": "bfc7232f369065b0",
+        "name": "Firebase - Temp",
+        "func": "var DB = \"https://mysmarthome-13774-default-rtdb.asia-southeast1.firebasedatabase.app/\";\nvar room = \"bedroom1\";\n\nmsg.method = \"PATCH\";\nmsg.url = DB + \"/\" + room + \"/temperature.json\";\nmsg.headers = { \"Content-Type\": \"application/json\" };\nmsg.payload = {\n    value: msg.payload,\n    status: msg.payload > 50 ? \"HIGH\" : \"NORMAL\",\n    timestamp: new Date().toISOString()\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1220,
+        "y": 820,
+        "wires": [
+            [
+                "5b5a582a69a7161d"
+            ]
+        ]
+    },
+    {
+        "id": "5b5a582a69a7161d",
+        "type": "http request",
+        "z": "bfc7232f369065b0",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1430,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ea3e1cb98cbc3235",
+        "type": "http request",
+        "z": "bfc7232f369065b0",
+        "name": "",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1250,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1d5b9d3c6a2774ee",
+        "type": "http in",
+        "z": "73660abab31b9bd8",
+        "name": "",
+        "url": "/api/bedroom2/:device",
+        "method": "post",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 860,
+        "y": 380,
+        "wires": [
+            [
+                "a9b033032b481b5e",
+                "c1905c59366c117e"
+            ]
+        ]
+    },
+    {
+        "id": "a9b033032b481b5e",
+        "type": "function",
+        "z": "73660abab31b9bd8",
+        "name": "function 12",
+        "func": "// lấy device từ URL\nvar device = msg.req.params.device;\nvar cmd = msg.payload;\nvar DB = \"https://mysmarthome-13774-default-rtdb.asia-southeast1.firebasedatabase.app/\";\n\n\n// lấy state cũ\nvar cur = flow.get('bedroom2_' + device) || { state: 'off' };\n\n// ===== XỬ LÝ THEO DEVICE =====\n\n// QUẠT\nif (device === 'fan' || device === 'fan3' || device === 'fan-ceil') {\n    if (!cur.speed) cur.speed = 1;\n    if (cmd.state) cur.state = cmd.state;\n    if (cmd.speed) cur.speed = parseInt(cmd.speed);\n}\n\n// ĐIỀU HOÀ\nelse if (device === 'ac3') {\n    if (!cur.temperature) cur.temperature = 25;\n    if (cmd.state) cur.state = cmd.state;\n\n    if (cmd.temperature !== undefined) {\n        var t = parseInt(cmd.temperature);\n        cur.temperature = Math.max(16, Math.min(30, t));\n    }\n}\n\n\n// THIẾT BỊ ON/OFF\nelse {\n    if (cmd.state) cur.state = cmd.state;\n}\n\n// lưu lại state\nflow.set('bedroom2_' + device, cur);\n\n// ===== MQTT =====\nmsg.topic = 'home/bedroom2/' + device;\nmsg.payload = cur;\n\nvar msgFirebase = {\n    method: \"PATCH\",\n    url: DB + \"/bedroom2/\" + device + \".json\",\n    headers: { \"Content-Type\": \"application/json\" },\n    payload: {\n        state: cur.state,\n        speed: cur.speed || null,\n        temperature: cur.temperature || null,\n        timestamp: new Date().toISOString()\n    }\n};\n\n// ===== RESPONSE =====\nvar msgRes = {\n    payload: {\n        success: true,\n        device: device,\n        data: cur\n    }\n};\n\nreturn [msg, msgRes,msgFirebase];",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 400,
+        "wires": [
+            [
+                "83999612941681df"
+            ],
+            [
+                "f20078e38e3ff376"
+            ],
+            [
+                "285f093f0198f444"
+            ]
+        ]
+    },
+    {
+        "id": "f20078e38e3ff376",
+        "type": "http response",
+        "z": "73660abab31b9bd8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1330,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "83999612941681df",
+        "type": "mqtt out",
+        "z": "73660abab31b9bd8",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d98ab1e8c5b778b3",
+        "x": 1330,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "40b8ce6856ee4ae2",
+        "type": "http in",
+        "z": "73660abab31b9bd8",
+        "name": "",
+        "url": "/api/bedroom2/:device/status",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 610,
+        "y": 160,
+        "wires": [
+            [
+                "cfb61c5cd640a124"
+            ]
+        ]
+    },
+    {
+        "id": "cfb61c5cd640a124",
+        "type": "function",
+        "z": "73660abab31b9bd8",
+        "name": "function 13",
+        "func": "var device = msg.req.params.device;\nvar cur = flow.get('bedroom2_' + device) || { state: 'off' };\n\nmsg.payload = cur;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 140,
+        "wires": [
+            [
+                "c98801def22c8465"
+            ]
+        ]
+    },
+    {
+        "id": "c98801def22c8465",
+        "type": "http response",
+        "z": "73660abab31b9bd8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1130,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "c1905c59366c117e",
+        "type": "debug",
+        "z": "73660abab31b9bd8",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "78d601665a7433eb",
+        "type": "inject",
+        "z": "73660abab31b9bd8",
+        "name": "smoke",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 820,
+        "y": 580,
+        "wires": [
+            [
+                "671333caea3929eb"
+            ]
+        ]
+    },
+    {
+        "id": "c79388cb659095c8",
+        "type": "inject",
+        "z": "73660abab31b9bd8",
+        "name": "temp",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 810,
+        "y": 660,
+        "wires": [
+            [
+                "d69a4e99069213b9"
+            ]
+        ]
+    },
+    {
+        "id": "671333caea3929eb",
+        "type": "function",
+        "z": "73660abab31b9bd8",
+        "name": "function 14",
+        "func": "const smoke = Math.random() < 0.4 ? 1 : 0;\n\n// Lưu vào global\nconst pccc = global.get('pccc') || {};\npccc.smoke = smoke;\nglobal.set('pccc', pccc);\n\nmsg.payload = { value: smoke };\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 580,
+        "wires": [
+            [
+                "9c239d669db2acd4"
+            ]
+        ]
+    },
+    {
+        "id": "d69a4e99069213b9",
+        "type": "function",
+        "z": "73660abab31b9bd8",
+        "name": "function 15",
+        "func": "const temp = Math.floor(Math.random() * 40) + 20;\n\nconst pccc = global.get('pccc') || {};\npccc.temperature = temp;\npccc.alert = pccc.smoke >= 1 || temp >= 50;\npccc.alertMsg = pccc.alert ? 'Cảnh báo!' : 'An toàn';\nglobal.set('pccc', pccc);\n\nmsg.payload = { value: temp };\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 660,
+        "wires": [
+            [
+                "ad1bdac92e7d649e"
+            ]
+        ]
+    },
+    {
+        "id": "558e51da9683d6c7",
+        "type": "function",
+        "z": "73660abab31b9bd8",
+        "name": "function smoke",
+        "func": "var value = msg.payload.value;\nglobal.set(\"smoke\", value);\n\nif (value === 1) {\n    global.set(\"alarm\", true);\n    global.set(\"lightState\", \"OFF\"); // tắt điện\n    node.warn(\"🔥 PHÁT HIỆN KHÓI!\");\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 760,
+        "wires": [
+            [
+                "3be4ed18e79d28ab"
+            ]
+        ]
+    },
+    {
+        "id": "1175bed8dd63d561",
+        "type": "function",
+        "z": "73660abab31b9bd8",
+        "name": "function temp",
+        "func": "var value = msg.payload.value;\nglobal.set(\"temperature\", value);\n\nif (value >= 50) {\n    global.set(\"alarm\", true);\n    global.set(\"lightState\", \"OFF\"); // tắt điện\n    node.warn(\"🌡️ NHIỆT ĐỘ CAO: \" + value);\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 840,
+        "wires": [
+            [
+                "c13cdeeba0a27329"
+            ]
+        ]
+    },
+    {
+        "id": "9c239d669db2acd4",
+        "type": "mqtt out",
+        "z": "73660abab31b9bd8",
+        "name": "",
+        "topic": "home/smoke",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d98ab1e8c5b778b3",
+        "x": 1210,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "ad1bdac92e7d649e",
+        "type": "mqtt out",
+        "z": "73660abab31b9bd8",
+        "name": "",
+        "topic": "home/temp",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d98ab1e8c5b778b3",
+        "x": 1190,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "63777f291d1cb6fc",
+        "type": "mqtt in",
+        "z": "73660abab31b9bd8",
+        "name": "",
+        "topic": "home/smoke",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "d98ab1e8c5b778b3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 930,
+        "y": 760,
+        "wires": [
+            [
+                "558e51da9683d6c7"
+            ]
+        ]
+    },
+    {
+        "id": "26d43792855dded6",
+        "type": "mqtt in",
+        "z": "73660abab31b9bd8",
+        "name": "",
+        "topic": "home/temp",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "d98ab1e8c5b778b3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 920,
+        "y": 860,
+        "wires": [
+            [
+                "1175bed8dd63d561"
+            ]
+        ]
+    },
+    {
+        "id": "cd5edbd77cdea3bb",
+        "type": "http in",
+        "z": "73660abab31b9bd8",
+        "name": "",
+        "url": "/api/bedroom2/fire/sensor",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 780,
+        "y": 960,
+        "wires": [
+            [
+                "ba7c3a8cac20e52e"
+            ]
+        ]
+    },
+    {
+        "id": "ba7c3a8cac20e52e",
+        "type": "function",
+        "z": "73660abab31b9bd8",
+        "name": "function 16",
+        "func": "const pccc = global.get('pccc') || {\n    smoke: 0,\n    temperature: 25,\n    alert: false,\n    alertMsg: 'An toàn'\n};\nmsg.payload = pccc;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 960,
+        "wires": [
+            [
+                "d8e0d9cfc1021bc0"
+            ]
+        ]
+    },
+    {
+        "id": "d8e0d9cfc1021bc0",
+        "type": "http response",
+        "z": "73660abab31b9bd8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1290,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "3be4ed18e79d28ab",
+        "type": "function",
+        "z": "73660abab31b9bd8",
+        "name": "Firebase - Smoke",
+        "func": "var DB = \"https://mysmarthome-13774-default-rtdb.asia-southeast1.firebasedatabase.app/\";\nvar room = \"bedroom2\"; \n\n// Lưu trạng thái hiện tại (PATCH)\nmsg.method = \"PATCH\";\nmsg.url = DB + \"/\" + room + \"/smoke.json\";\nmsg.headers = { \"Content-Type\": \"application/json\" };\nmsg.payload = {\n    value: msg.payload,\n    status: msg.payload > 0 ? \"DETECTED\" : \"CLEAR\",\n    timestamp: new Date().toISOString()\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 760,
+        "wires": [
+            [
+                "fda30c123d69518d"
+            ]
+        ]
+    },
+    {
+        "id": "c13cdeeba0a27329",
+        "type": "function",
+        "z": "73660abab31b9bd8",
+        "name": "Firebase - Temp",
+        "func": "var DB = \"https://mysmarthome-13774-default-rtdb.asia-southeast1.firebasedatabase.app/\";\nvar room = \"bedroom2\";\n\nmsg.method = \"PATCH\";\nmsg.url = DB + \"/\" + room + \"/temperature.json\";\nmsg.headers = { \"Content-Type\": \"application/json\" };\nmsg.payload = {\n    value: msg.payload,\n    status: msg.payload > 50 ? \"HIGH\" : \"NORMAL\",\n    timestamp: new Date().toISOString()\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1380,
+        "y": 840,
+        "wires": [
+            [
+                "fda30c123d69518d"
+            ]
+        ]
+    },
+    {
+        "id": "fda30c123d69518d",
+        "type": "http request",
+        "z": "73660abab31b9bd8",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1590,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "285f093f0198f444",
         "type": "http request",
         "z": "73660abab31b9bd8",
@@ -20,5 +2027,13 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "6ee3033392d331b5",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6"
+        }
     }
 ]
