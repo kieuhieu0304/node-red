@@ -1,8 +1,9 @@
 services:
   - type: web
-    name: node red
+    name: node-red
     runtime: docker
     plan: free
-    envVars:
-      - key: TZ
-        value: Asia/Ho_Chi_Minh
+    disk:
+      name: nodered-data
+      mountPath: /data
+      sizeGB: 1
